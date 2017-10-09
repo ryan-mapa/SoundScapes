@@ -29,15 +29,12 @@ This app will, at a minimum, satisfy the following criteria with smooth, bug-fre
 ![discovery](./wireframes/Discovery.png)
 
 #SoundScape View
-![soundscape](./wireframes/Soundscape View.png)
+![soundscape](./wireframes/SoundscapeView.png)
 
 # User Profile
-![user profile](./wireframes/Homepage_Profile.png)
+![user profile](./wireframes/HomepageProfile.png)
 
-# Search
-![search](./wireframes/Search.png)
 
-![otherstuff](./wireframes/Connect.png)
 
 * [API Endpoints][api_endpoints]
 * [React Components][component_hierarchy]
