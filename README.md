@@ -96,7 +96,7 @@ The technical challenges for this application will be:
   + Figure out how to save SoundScape information
 + React Native
   + Figure out differences from Reactjs
-+ OAutn
++ OAuth
   + How do we do it?
 
 
