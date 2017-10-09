@@ -21,15 +21,21 @@ This app will, at a minimum, satisfy the following criteria with smooth, bug-fre
 ## Design Documents
 
 ### Wireframes
-+ Sign Up
 
-![signup]()
+# Login
+![login](./wireframes/Login.png)
 
-+ Sign In
+# Homepage/Discovery
+![discovery](./wireframes/Discovery.png)
 
-![signin]()
+#SoundScape View
+![soundscape](./wireframes/Soundscape_View.png)
 
-+ Connect
+# User Profile
+![user profile](./wireframes/Homepage_Profile.png)
+
+# Search
+![search](./wireframes/Search.png)
 
 ![otherstuff](./wireframes/Connect.png)
 
