@@ -1,5 +1,6 @@
 # SoundScapes
 
+
 ## Background and Overview
 
 SoundScapes is an iOS mobile application which allows users to map their
@@ -12,6 +13,7 @@ to connect people through their collective associations of music and
 places. With SoundScapes, one may finally step into the shoes of their
 friends, significant others, or even famous celebrities through the
 moods their music evokes.
+
 
 ## Functionality & Minimum Viable Product
 
@@ -30,28 +32,22 @@ This app will, at a minimum, satisfy the following criteria with smooth, bug-fre
 - [ ] String multiple points together to create successive walking playlists
 - [ ] Search by location, paths, destinations
 
+
 ## Design Documents
 
 ### Wireframes
 
-# Login
+#### Login
 ![login](./wireframes/Login.png)
 
-# Homepage/Discovery
+#### Homepage/Discovery
 ![discovery](./wireframes/Discovery.png)
 
-#SoundScape View
+#### SoundScape View
 ![soundscape](./wireframes/SoundscapeView.png)
 
-# User Profile
+#### User Profile
 ![user profile](./wireframes/HomepageProfile.png)
-
-
-
-* [API Endpoints][api_endpoints]
-* [React Components][component_hierarchy]
-* [Sample Schema][sample_schema]
-* [Sample State][sample_state]
 
 
 ## Group Members & Work Breakdown
@@ -112,17 +108,14 @@ The technical challenges for this application will be:
 + React Native
   + Figure out differences from Reactjs
 + OAuth
-  + How do we do it?
+  + Implementation
 
 
 ## Technology details of Our Stack
 
-
 ### Google Maps API
 [Google Maps API](https://developers.google.com/maps/documentation/android-api/start)
-
 + Allows us to create maps with Google data
-
 + Libraries like Drawing and Places expand the functionality, allowing us to draw lines
 
 ### React Native
@@ -130,10 +123,8 @@ The technical challenges for this application will be:
 + React Native library lets you build mobile apps using Javascript and React, indistinguishable from apps built with Obj-C, Swift, or Java.
 
 ### Spotify API
-
-[node.js](https://github.com/nodejs/node)
+[Spotify API](https://developer.spotify.com/web-api/)
 + Provides data on the song a user is currently playing
-
 
 
 ## Implementation Timeline
