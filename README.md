@@ -29,7 +29,7 @@ This app will, at a minimum, satisfy the following criteria with smooth, bug-fre
 ![discovery](./wireframes/Discovery.png)
 
 #SoundScape View
-![soundscape](./wireframes/Soundscape_View.png)
+![soundscape](./wireframes/Soundscape View.png)
 
 # User Profile
 ![user profile](./wireframes/Homepage_Profile.png)
