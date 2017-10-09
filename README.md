@@ -67,24 +67,34 @@ Michael's primary responsibilities will be:
 
 ## Technologies and Technical Challenges
 
-Rails back-end
+Rails backend
 OAuth
 React Native
 Spotify API
-Google (maps) API
+Google Maps API
 
-This mobile iOS application will be built using a MERN stack (MongoDB, Express.js, React Native, Node.js), which has many positives for this application.
-+ Allows for JavaScript to be used for both client-side and server-side code.
-+ React Native allows for quick prototyping and high initial velocity for a mobile application.
-+ Object representation is JSON (JavaScript Object Notation) in both the back-end and the front-end.
-+ Node.js's non-blocking I/O is great for quick simultaneous actions, like chat.
+This mobile Android application will be built using a Rails backend with a React Native frontend, integrating APIs from Google Maps and Spotify.
++ OAuth simultaneously connects us with the data we need, while eliminating requirements for local Auth
++ Pulling data from Google and Spotify lets us stitch together SoundScapes
++ React Native allows us to interact smoothly with native code if we need to
++ React Native's cross-platform functionality will be easily applicable to other mobie operating systems
 
 The technical challenges for this application will be:
 
-+ Connecting our front-end with a NoSQL back-end database.
-+ Understanding web-sockets and providing smooth user-to-user messaging.
-+ Creating a virtual plant feature with a pleasing UI and seamless UX for user satisfaction.
-+ Add graphics library / drawn images for the virtual plant.
++ Pulling the relevant information from Spotify
+  + Current song
+  + Song changes
++ Google Maps Api
+  + Port web app knowledge over to Android
+  + Get current device location
+  + Filter map by nearby SoundScapes
+  + Draw Polylines from current location in Realtime
+  + On song change, create a new SoundSpot at current location, and change Polyline color
+  + Figure out how to save SoundScape information
++ React Native
+  + Figure out differences from Reactjs
++ OAutn
+  + How do we do it?
 
 
 ## Technology details of MERN
