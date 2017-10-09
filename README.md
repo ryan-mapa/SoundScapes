@@ -97,34 +97,24 @@ The technical challenges for this application will be:
   + How do we do it?
 
 
-## Technology details of MERN
+## Technology details of Our Stack
 
-### MongoDB
-[mongoDB](https://npmjs.org/package/mongodb)
 
-+ MongoDB is the database used in the MERN stack. Uses a NoSQL document-oriented database, with a flexible schema and a JSON based query language.
-  + For example, for our app, we would have users and photos. Typically, a relational database would create two tables - one for users, one for photos with `user_id`. With a NOSQL database, we would store all the data as a single document, and fetch it all at once with any level of nesting.
-+ MongoDB has the ability to index on deeply nested fields unlike RDBMS's.
-+ Storing an object in a MongoDB database does not have to follow a schema like Rails.
-+ Data is also retrieved in JSON format.  + Comes with a shell built on JS runtime like Node.js. (Like Rails C but for MongoDB)
+### Google Maps API
+[Google Maps API](https://developers.google.com/maps/documentation/android-api/start)
 
-### Express.js
-[express](http://expressjs.com/)
++ Allows us to create maps with Google data
 
-+ The Express.js framework provides specific routes for data retrieved from HTTP requests.
-
-+ Acts as the rails for Node.js.
-
-+ Express parses request URL, headers and parameters via Regex. On the response side, it has, as expected, all functionality required by web applications. This includes setting response codes and setting cookies.
++ Libraries like Drawing and Places expand the functionality, allowing us to draw lines
 
 ### React Native
 [react native](https://github.com/facebook/react-native)
 + React Native library lets you build mobile apps using Javascript and React, indistinguishable from apps built with Obj-C, Swift, or Java.
 
-### Node.js
+### Spotify API
 
 [node.js](https://github.com/nodejs/node)
-+ Google's V8 run-time environment used for running server-sided JavaScript. Used alongside express with MongoDB.
++ Provides data on the song a user is currently playing
 
 ### FEATURE Overview
 
