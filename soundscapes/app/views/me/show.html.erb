@@ -1,0 +1,6 @@
+<% if current_user %>
+  <% current_user.attributes.each do |attr, val| %>
+    <b> <%= attr %>:</b> <%= val %> <br>
+  <% end %>
+<% end %>
+  
