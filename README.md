@@ -1,48 +1,53 @@
 # SoundScapes
 
+
 ## Background and Overview
 
-What does it do and why? Give example.
+SoundScapes is an iOS mobile application which allows users to map their
+favorite tunes to a geographic location. Users can curate experiences
+consisting of place and music pairings to share with others.
 
-Add link to live: [Link]()
+While apps such as Spotify and Google Maps have never made it easier to
+listen to music or navigate the streets, there remains a lack of ability
+to connect people through their collective associations of music and
+places. With SoundScapes, one may finally step into the shoes of their
+friends, significant others, or even famous celebrities through the
+moods their music evokes.
+
 
 ## Functionality & Minimum Viable Product
 
 This app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation:
 
-- [ ] OAuth with spotify...
-- [ ]
+- [ ] OAuth with Spotify
+- [ ] Demo for showcasing
+- [ ] User Profiles, view of favorite/creates SoundScapes
+- [ ] Discovery homepage that finds SoundScapes for current area
+- [ ] Creating new SoundScapes
+- [ ] Search for other users, view their favorite/created SoundScapes
+- [ ] Production README
 
 ### Bonus
 
-- [ ] cool features
+- [ ] String multiple points together to create successive walking playlists
+- [ ] Search by location, paths, destinations
 
 
 ## Design Documents
 
 ### Wireframes
 
-# Login
+#### Login
 ![login](./wireframes/Login.png)
 
-# Homepage/Discovery
+#### Homepage/Discovery
 ![discovery](./wireframes/Discovery.png)
 
-#SoundScape View
-![soundscape](./wireframes/Soundscape View.png)
+#### SoundScape View
+![soundscape](./wireframes/SoundscapeView.png)
 
-# User Profile
-![user profile](./wireframes/Homepage_Profile.png)
-
-# Search
-![search](./wireframes/Search.png)
-
-![otherstuff](./wireframes/Connect.png)
-
-* [API Endpoints][api_endpoints]
-* [React Components][component_hierarchy]
-* [Sample Schema][sample_schema]
-* [Sample State][sample_state]
+#### User Profile
+![user profile](./wireframes/HomepageProfile.png)
 
 
 ## Group Members & Work Breakdown
@@ -50,26 +55,29 @@ This app will, at a minimum, satisfy the following criteria with smooth, bug-fre
 Our group consists of four members: Ryan Mapa, Parker Fritch, David Banks, Michael Wei
 
 Ryan's primary responsibilities will be:
-* Timeline manager.
-*
-*
-*
+* Timeline manager
+* OAuth researcher/engineer
+* Setting up user auth
+* Login View
+* User discovery
 
 Parker's primary responsibilities will be:
-*
-*
-*
+* Google Maps API researcher/engineer
+* Setting up Google Maps API hooks
+* Discovery and map view
+* Backend SoundScape storage
 
 David's primary responsibilities will be:
-*
-*
-*
+* React Native engineer
+* Working with Ryan to implement the remainder of backend architecture
+* SoundScapes index and show views
+* Edit README
 
 Michael's primary responsibilities will be:
-*
-*
-*
-
+* Spotify API researcher/engineer
+* Setting up Spotify API hooks
+* Create SoundScapes Process
+* Everything else
 
 ## Technologies and Technical Challenges
 
@@ -100,17 +108,14 @@ The technical challenges for this application will be:
 + React Native
   + Figure out differences from Reactjs
 + OAuth
-  + How do we do it?
+  + Implementation
 
 
 ## Technology details of Our Stack
 
-
 ### Google Maps API
 [Google Maps API](https://developers.google.com/maps/documentation/android-api/start)
-
 + Allows us to create maps with Google data
-
 + Libraries like Drawing and Places expand the functionality, allowing us to draw lines
 
 ### React Native
@@ -118,98 +123,37 @@ The technical challenges for this application will be:
 + React Native library lets you build mobile apps using Javascript and React, indistinguishable from apps built with Obj-C, Swift, or Java.
 
 ### Spotify API
-
-[node.js](https://github.com/nodejs/node)
+[Spotify API](https://developer.spotify.com/web-api/)
 + Provides data on the song a user is currently playing
-
-### FEATURE Overview
-
-Major rundown on core features (ex: chat) so like, the map view or something...
-
-
-**How it works in SoundScapes**
-
-In Woven, we are dealing with a single chatroom with two people.
-
-On the **server side**, we have a simple Express.js application which does 2 things:
-
-+ 1) a `GET '/'` request handler in the chatroom box, for the message board / Send button to create a new message.
-
-+ 2) Websockets server for messages from websocket clients.
-
-
-+ **Websockets**: an upgrade to typical HTTP requests - allows for bi-directional data transfer between the client and server.
-[socket.io](https://socket.io/) seems to work the best.
-(as opposed to HTTP unidirectional flow where the server must take on all the client requests before moving on)
-
-On the **client side**, we have:
-
-+ a page with 2 handlers
-  + 1) on the Send button, which picks up the input message.
-  + 2) one that listens for new messages on the websockets client, AKA listens for messages sent by the SO, to update the `current_user`'s' message board.
-
-**Step by step** here’s what happens when `current_user` sends a message.:
-
-+ 1) app notices the 'Send' button click through a JS event handler.
-+ 2) emits a websocket message through the websocket client connected to the server.
-+ 3) the partner receives the new message as a push message through a websocket component running in the SO's application.
-+ 4) message is obtained, and chat is updated.
-
-### API Endpoints with MongoDB
-
-If we were using Rails, we would need to convert to and from JSON. With Node.js, we can simply deliver JSON objects through RESTful APIs for the client. With MongoDB, we don't have to worry about the conversion between JSON and Ruby. Also, we avoid the need for multiple data-type conversions by using a uniform data serialization format across the client, server, and database.
 
 
 ## Implementation Timeline
 
-### Phase 1: Learn Technologies (2 days)
+### Phase 1: Learn Technologies (3 days)
 
-+ Objective: All group members will dedicate the weekend to learning each component of the MERN (MongoDB, Express, React Native, Node.js) stack and become familiar with the overall workflow.
++ As a group we will break down our desired core features and discuss
+backend architecture.
 
-+ By the end of Day 2, we will have:
-  + Completed Proposal README
-  + Understanding of MERN
++ Group members will be focused primarily on learning ReactNative and
+gathering information on the Google and Spotify APIs, making sure the
+agreed-upon features are viable.
 
-### Phase 2: Backbone (3 days)
++ Plan a schema and state shape.
 
-+ Phase 2a: User Authentication (All) (1 day):
-  + Objective: Set up user authentication via React Native and Auth0 API.
-  + By the end of the Day 3, we will have:
-    + User can sign up and login that persist through sessions unless logged out.
+### Phase 2: Backend (2 days)
 
++ Write backend and implement Spotify OAuth (Ryan, David)
 
-+ Phase 2b: Splash (Janet) + Home/Index Page (Keith/Jared) (2 days):
-  + Objective: Set up functional index page for the application, that allows for easy access to other features.
-  + By the end of the day, we will have:
-    + An index page that allows the user to navigate to the app's features.
++ More Google, Spotify API research (Parker, Michael)
 
+### Phase 3: Frontend (2 days)
 
-+ Phase 2c User Profiles (Greg and Evelyn) (2 days):
-  + Objective: Set up User Profiles
-  + By the end of the day, we will have:
-    + Users can access and edit their profile page.
++ Begin frontend development, implementation of APIs.
 
++ All backend schema tables being reflected in frontend
 
-### Phase 3: MVP Features  (4 days)
+### Phase 4: MVPs (3 days)
 
-+ Phase 3a: Virtual Plant (4 days) (Janet and Keith)
-  + Features include:
-    + Plant attributes: name of plant, type of plant, age, description, health, happiness.
-    + Functionality: water, sunlight.
-    + Display: feature icon, background with time of day, water button, feeding button, image of plant at different stages, name, happiness level, health of plant.
++ User profiles with filtered indices of SoundScapes, Spotify follows
 
-
-+ Phase 3b: Instant Messaging w/ [socket.io](https://socket.io/) (4 days) (Evelyn, Greg, Jared)
-  + Features include:
-    + Stickers / Emoticons
-    + Photos
-    + Mood tracker / status
-    + Database for message storage
-
-
-## Plan for getting users and reviews
-
-+ All members will each share with at least 20 friends and family members.
-+ Soft launch with close friends.
-+ Janet will post in an appropriate sub-reddit and Product Hunt for exposure.
-+ Evelyn will submit the app for review on the App store.
++ Map view finds SoundScapes only for current area
