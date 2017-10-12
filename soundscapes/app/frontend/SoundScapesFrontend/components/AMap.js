@@ -126,7 +126,7 @@ export default class AMap extends Component {
       />
       <MapView.Marker
         coordinate={this.state.position}
-        image={require('../../../assets/images/current_location_marker.png')}
+        image={require('../frontend_assets/images/current_location_marker.png')}
       />
       </MapView>
     );
