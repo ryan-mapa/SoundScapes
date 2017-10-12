@@ -9,7 +9,5 @@ end
 # keys.spotify['client_id']
 # keys.spotify['client_secret']
 
-# Rails.application.secrets.oauth_key
-# Rails.application.secrets.oauth_secret
 
 # :facebook, '175674496323311', 'b3501e76c5531afbe8ef266aca8974cf'
