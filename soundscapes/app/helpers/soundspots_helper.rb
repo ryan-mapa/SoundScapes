@@ -1,0 +1,2 @@
+module SoundspotsHelper
+end
