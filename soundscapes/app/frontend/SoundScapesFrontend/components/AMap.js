@@ -39,19 +39,19 @@ export default class AMap extends Component {
           latlng: {latitude: 37.793688, longitude: -122.404568},
           title: "first",
           description: "this is a marker",
-          image: require('../../assets/images/flavortown.png')
+          // image: require('../../assets/images/flavortown.png')
         },
         {
           latlng: {latitude: 37.803413, longitude: -122.408403},
           title: "second",
           description: "another marker",
-          image: require('../../assets/images/flavortown.png')
+          // image: require('../../assets/images/flavortown.png')
         },
         {
           latlng: {latitude: 37.807124, longitude: -122.417313},
           title: "third",
           description: "third marker",
-          image: require('../../assets/images/flavortown.png')
+          // image: require('../../assets/images/flavortown.png')
         }
       ],
       polyline: {
