@@ -12,5 +12,6 @@ class Soundscape < ApplicationRecord
 
   belongs_to :user
   has_many :soundspots
-  
+  has_many :favorites
+
 end
