@@ -1,0 +1,3 @@
+rootProject.name = 'soundscapes_frontend'
+
+include ':app'
