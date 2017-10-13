@@ -8,7 +8,8 @@ import {
   StyleSheet,
   Text,
   View,
-  NativeModules
+  NativeModules,
+  Linking
 } from 'react-native';
 
 // debugger;
@@ -18,7 +19,7 @@ class logIn extends Component {
   componentWillMount() {
     console.log(NativeModules);
     return SpotifyAuth.initWithCredentials(
-      "28d14392889b49b687084edd83dbc798",
+      "2d9b5153c47946eea1f7af099022b036",
       "soundscapes://redirectafterlogin",
       [
         "streaming",
@@ -36,6 +37,12 @@ class logIn extends Component {
         }
       }
     );
+  }
+
+  componentDidMount() {
+    Linking.getInitialURL().then(url => {
+      console.log('intiaial url is:', url);
+    }).catch(err => console.log(err));
   }
 
   render() {
