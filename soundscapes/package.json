@@ -2,6 +2,10 @@
   "name": "soundscapes",
   "private": true,
   "dependencies": {
-    "react-native-maps": "^0.17.0"
+    "lodash": "^4.17.4",
+    "react-native-maps": "^0.17.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   }
 }
