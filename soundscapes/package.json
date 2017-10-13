@@ -1,5 +1,7 @@
 {
   "name": "soundscapes",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "react-native-maps": "^0.17.0"
+  }
 }
