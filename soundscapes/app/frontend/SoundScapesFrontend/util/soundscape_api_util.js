@@ -7,3 +7,7 @@ export const fetchSoundscapes = data => (
 export const fetchSoundscape = soundscapeId => (
   axios.get(`api/soundscapes/${soundscapeId}`)
 );
+
+export const createSoundscape = soundscape => (
+  axios.post('api/soundscapes', soundscape)
+);
