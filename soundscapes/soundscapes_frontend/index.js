@@ -32,7 +32,7 @@ class logIn extends Component {
       ],
       error => {
         if (error) {
-          alert(error);
+          console.log(error);
         }
       }
     );
@@ -42,7 +42,7 @@ class logIn extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.normalText}>
-          It's SoundScapes!
+          Welcome to SoundScapes!
         </Text>
         <TouchableHighlight
           style={styles.button}
