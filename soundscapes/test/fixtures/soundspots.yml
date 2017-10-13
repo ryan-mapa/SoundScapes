@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: soundspots
+#
+#  id            :integer          not null, primary key
+#  longitude     :float
+#  latitude      :float
+#  music         :string
+#  user_id       :integer
+#  image_url     :string
+#  description   :text
+#  name          :string
+#  soundscape_id :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longitude: 1.5
+  latitude: 1.5
+  music: MyString
+  user_id: 1
+  image_url: MyString
+  description: MyText
+  name: MyString
+  soundscape_id: 1
+
+two:
+  longitude: 1.5
+  latitude: 1.5
+  music: MyString
+  user_id: 1
+  image_url: MyString
+  description: MyText
+  name: MyString
+  soundscape_id: 1

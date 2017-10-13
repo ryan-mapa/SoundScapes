@@ -31,7 +31,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'omniauth'
-
 gem 'omniauth-spotify'
 gem 'annotate'
 
@@ -42,6 +41,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'pry-rails'
+
 end
 
 group :development do
