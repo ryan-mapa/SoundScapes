@@ -15,6 +15,7 @@
 
 class User < ApplicationRecord
 
+  has_many :soundscapes
   has_many :soundspots
   has_many :favorites
 
@@ -30,4 +31,7 @@ class User < ApplicationRecord
     end
   end
 
+  def self.search(query)
+    self.where("name ILIKE ?", "%#{query}%")
+  end
 end
