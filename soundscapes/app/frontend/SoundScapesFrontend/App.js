@@ -8,6 +8,10 @@ import {
 
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+
 /// components
 import Profile from './components/profile';
 import Discover from './components/discover';
