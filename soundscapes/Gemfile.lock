@@ -40,12 +40,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-<<<<<<< HEAD
     annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
-=======
->>>>>>> 1caa91d... Committing before pbxproj copy
     arel (8.0.0)
     bindex (0.5.0)
     builder (3.2.3)
@@ -59,10 +56,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
-<<<<<<< HEAD
     coderay (1.1.2)
-=======
->>>>>>> 1caa91d... Committing before pbxproj copy
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -74,26 +68,17 @@ GEM
     crass (1.0.2)
     erubi (1.6.1)
     execjs (2.7.0)
-<<<<<<< HEAD
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashie (3.5.6)
-=======
-    ffi (1.9.18)
-    globalid (0.4.0)
-      activesupport (>= 4.2.0)
->>>>>>> 1caa91d... Committing before pbxproj copy
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-<<<<<<< HEAD
     jwt (1.5.6)
-=======
->>>>>>> 1caa91d... Committing before pbxproj copy
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -111,7 +96,6 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
-<<<<<<< HEAD
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     nio4r (2.1.0)
@@ -137,12 +121,6 @@ GEM
       method_source (~> 0.9.0)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
-=======
-    nio4r (2.1.0)
-    nokogiri (1.8.1)
-      mini_portile2 (~> 2.3.0)
-    pg (0.21.0)
->>>>>>> 1caa91d... Committing before pbxproj copy
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -225,23 +203,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
   annotate
-=======
->>>>>>> 1caa91d... Committing before pbxproj copy
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-<<<<<<< HEAD
   omniauth
   omniauth-spotify
   pg (~> 0.18)
   pry-rails
-=======
-  pg (~> 0.18)
->>>>>>> 1caa91d... Committing before pbxproj copy
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)

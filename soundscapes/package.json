@@ -1,11 +1,7 @@
 {
   "name": "soundscapes",
   "private": true,
-<<<<<<< HEAD
   "dependencies": {
     "react-native-maps": "^0.17.0"
   }
-=======
-  "dependencies": {}
->>>>>>> 1caa91d... Committing before pbxproj copy
 }

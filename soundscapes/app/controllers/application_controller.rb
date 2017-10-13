@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-<<<<<<< HEAD
   helper_method :current_user
 
   def authenticate
@@ -15,6 +14,4 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-=======
->>>>>>> 1caa91d... Committing before pbxproj copy
 end
