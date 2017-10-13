@@ -15,6 +15,10 @@
 
 class User < ApplicationRecord
 
+  has_many :soundscapes
+  has_many :soundspots
+  has_many :favorites
+
   def self.find_or_create_from_auth_hash(auth)
 
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
@@ -28,4 +32,7 @@ class User < ApplicationRecord
     end
   end
 
+  def self.search(query)
+    self.where("name ILIKE ?", "%#{query}%")
+  end
 end
