@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def redirect
-    render json: {message: "success"}
+    # render json: {message: "success"}
+    redirect_to :me
     # redirect_to 'soundscapes://yo'
   end
 
