@@ -53,11 +53,14 @@ const MainNav = TabNavigator({
   }
 });
 
+
+
 export default class App extends Component {
   render() {
     return (
       <View style={{backgroundColor: '#f7f7f7', flex: 8}}>
         <Login />
+        <MainNav />
       </View>
     );
   }
