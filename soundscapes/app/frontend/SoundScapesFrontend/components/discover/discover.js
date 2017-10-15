@@ -7,6 +7,10 @@ export default class Discover extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.getSoundscapes();
+  }
+
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
