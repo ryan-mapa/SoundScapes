@@ -15,7 +15,7 @@ import thunkMiddleware from 'redux-thunk';
 
 /// components
 import Profile from './components/profile/profile';
-import Discover from './components/discover/discover';
+import DiscoverContainer from './components/discover/discover_container';
 import Search from './components/search/search';
 import Create from './components/create/create';
 
@@ -26,7 +26,7 @@ const MainNav = TabNavigator({
     screen: Profile
   },
   Discover: {
-    screen: Discover
+    screen: DiscoverContainer
   },
   Search: {
     screen: Search
@@ -53,11 +53,14 @@ const MainNav = TabNavigator({
   }
 });
 
+
+
 export default class App extends Component {
   render() {
     return (
       <View style={{backgroundColor: '#f7f7f7', flex: 8}}>
         <Login />
+        <MainNav />
       </View>
     );
   }

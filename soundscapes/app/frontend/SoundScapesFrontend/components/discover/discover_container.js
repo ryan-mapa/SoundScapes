@@ -1,7 +1,7 @@
 import Discover from './discover';
 
 import { connect } from 'react-redux';
-import { getSoundscapes } from '../../actions/soundacape_actions';
+import { getSoundscapes } from '../../actions/soundscape_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
