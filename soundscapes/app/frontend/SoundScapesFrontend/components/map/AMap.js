@@ -100,7 +100,8 @@ export default class AMap extends Component {
     });
 
     this.setState({
-      markers: markersFromProps
+      markers: markersFromProps,
+      polylines: polylinesFromProps
     });
 
     console.log("geolocation:", navigator.geolocation);
@@ -149,11 +150,15 @@ export default class AMap extends Component {
           description={marker.description}
         />);
       })}
-      <MapView.Polyline
-        coordinates={this.state.polyline.coordinates}
-        strokeColor={this.state.polyline.strokeColor}
-        strokeWidth={this.state.polyline.strokeWidth}
-      />
+      {this.state.polylines.map(polyline => {
+        return(
+          <MapView.Polyline
+            coordinates={polyline.coordinates}
+            strokeColor={polyline.strokeColor}
+            strokeWidth={polyline.strokeWidth}
+            />
+        );
+      })}
       <MapView.Marker
         coordinate={this.state.position}
         image={require('../frontend_assets/images/current_location_marker.png')}
