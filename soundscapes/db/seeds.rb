@@ -16,8 +16,8 @@ users = User.create([
   ])
 
 
-user1_id = User.where(name: 'Ryan Danger Mapa').id
-user2_id = User.where(name: 'Adam Kovic').id
+user1_id = User.where(name: 'Ryan Danger Mapa').first.id
+user2_id = User.where(name: 'Adam Kovic').first.id
 
 
 soundscapes = Soundscape.create([
@@ -31,8 +31,8 @@ soundscapes = Soundscape.create([
   }
   ])
 
-soundscape1_id = Soundscape.where(name: "Ryan's evening stroll")
-soundscape2_id = Soundscape.where(name: "Adam's greasy swim")
+soundscape1_id = Soundscape.where(name: "Ryan's evening stroll").first.id
+soundscape2_id = Soundscape.where(name: "Adam's greasy swim").first.id
 
 soundspots = Soundspot.create([
   {
