@@ -56,12 +56,15 @@ export default class AMap extends Component {
       // ],
       markers: [],
 
-      polyline: {
-        coordinates: [{latitude: 37.793688, longitude: -122.404568}, {latitude: 37.803413, longitude: -122.408403}, {latitude: 37.807124, longitude: -122.417313}],
-        strokeWidth: 3,
-        strokeColor: '#4286f4',
+      // polyline: {
+      //   coordinates: [{latitude: 37.793688, longitude: -122.404568}, {latitude: 37.803413, longitude: -122.408403}, {latitude: 37.807124, longitude: -122.417313}],
+      //   strokeWidth: 3,
+      //   strokeColor: '#4286f4',
+      //
+      // },
 
-      },
+      polylines: [],
+
       position: null,
       error: null,
       region: {
@@ -76,18 +79,29 @@ export default class AMap extends Component {
 
   componentDidMount() {
     const markersFromProps = [];
-    this.props.soundscape.soundspots.forEach(soundspot => {
-      const newMarker = {
-        latlng: {
+    const polylinesFromProps = [];
+    this.props.soundscapes.forEach(soundscape => {
+      const coordinates = [];
+      soundscape.soundspots.forEach(soundspot => {
+        const newMarker = {
+          latlng: {
+            latitude: soundspot.latitude,
+            longitude: soundspot.longitude
+          }
+        };
+        const newCoords = {
           latitude: soundspot.latitude,
           longitude: soundspot.longitude
-        }
-      };
-      markersFromProps.push(newMarker);
+        };
+        markersFromProps.push(newMarker);
+        coordinates.push(newCoords);
+      });
+      polylinesFromProps.push(coordinates);
     });
 
     this.setState({
-      markers: markersFromProps
+      markers: markersFromProps,
+      polylines: polylinesFromProps
     });
 
     console.log("geolocation:", navigator.geolocation);
@@ -136,11 +150,15 @@ export default class AMap extends Component {
           description={marker.description}
         />);
       })}
-      <MapView.Polyline
-        coordinates={this.state.polyline.coordinates}
-        strokeColor={this.state.polyline.strokeColor}
-        strokeWidth={this.state.polyline.strokeWidth}
-      />
+      {this.state.polylines.map(polyline => {
+        return(
+          <MapView.Polyline
+            coordinates={polyline.coordinates}
+            strokeColor={polyline.strokeColor}
+            strokeWidth={polyline.strokeWidth}
+            />
+        );
+      })}
       <MapView.Marker
         coordinate={this.state.position}
         image={require('../frontend_assets/images/current_location_marker.png')}
