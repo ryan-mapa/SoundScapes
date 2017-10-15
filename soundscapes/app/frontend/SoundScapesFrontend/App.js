@@ -6,15 +6,20 @@ import {
   View
 } from 'react-native';
 
+import Login from './components/login/login';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
-/// components
-import Profile from './components/profile';
-import Discover from './components/discover';
-import Search from './components/search';
-import Create from './components/create';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 
-import AMap from './components/AMap';
+/// components
+import Profile from './components/profile/profile';
+import Discover from './components/discover/discover';
+import Search from './components/search/search';
+import Create from './components/create/create';
+
+import AMap from './components/map/AMap';
 
 const MainNav = TabNavigator({
   Profile: {
@@ -52,7 +57,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={{backgroundColor: '#f7f7f7', flex: 8}}>
-        <MainNav />
+        <Login />
       </View>
     );
   }
