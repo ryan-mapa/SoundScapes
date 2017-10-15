@@ -18,10 +18,26 @@ users = User.create([
 user1_id = User.where(name: 'Ryan Danger Mapa').id
 user2_id = User.where(name: 'Adam Kovic').id
 
+
 soundspots = Soundspot.create([
   {
     latitude: 37.784370,
     longitude: -122.417621,
+    user_id: user1_id
+  },
+  {
+    latitude: 37.788683,
+    longitude: -122.424879,
+    user_id: user1_id
+  },
+  {
+    latitude: 37.791602,
+    longitude: -122.436187,
+    user_id: user1_id
+  },
+  {
+    latitude: 37.793884,
+    longitude: -122.450463,
     user_id: user1_id
   },
 
@@ -29,6 +45,9 @@ soundspots = Soundspot.create([
 
 soundscapes = Soundscape.create([
   {
-
+    name: "Ryan's evening stroll",
+    user_id: user1_id
   }
   ])
+
+  soundscape1_id = Soundscape.where(name: "Ryan's evening stroll")
