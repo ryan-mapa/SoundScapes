@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, AppRegistry, ScrollView, View, Button, Image } from 'react-native';
-import AMap from './AMap';
+import AMap from '../map/AMap';
 
 export default class Discover extends React.Component {
   render() {
