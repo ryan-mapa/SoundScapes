@@ -13,19 +13,19 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 /// components
-import Profile from './components/profile';
-import Discover from './components/discover';
-import Search from './components/search';
-import Create from './components/create';
+import Profile from './components/profile/profile';
+import DiscoverContainer from './components/discover/discover_container';
+import Search from './components/search/search';
+import Create from './components/create/create';
 
-import AMap from './components/AMap';
+import AMap from './components/map/AMap';
 
 const MainNav = TabNavigator({
   Profile: {
     screen: Profile
   },
   Discover: {
-    screen: Discover
+    screen: DiscoverContainer
   },
   Search: {
     screen: Search
