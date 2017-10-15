@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 
+import Login from './components/login';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 /// components
@@ -52,7 +53,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={{backgroundColor: '#f7f7f7', flex: 8}}>
-        <MainNav />
+        <Login />
       </View>
     );
   }
