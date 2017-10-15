@@ -34,26 +34,28 @@ export default class AMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      markers: [
-        {
-          latlng: {latitude: 37.793688, longitude: -122.404568},
-          title: "first",
-          description: "this is a marker",
-          // image: require('../../assets/images/flavortown.png')
-        },
-        {
-          latlng: {latitude: 37.803413, longitude: -122.408403},
-          title: "second",
-          description: "another marker",
-          // image: require('../../assets/images/flavortown.png')
-        },
-        {
-          latlng: {latitude: 37.807124, longitude: -122.417313},
-          title: "third",
-          description: "third marker",
-          // image: require('../../assets/images/flavortown.png')
-        }
-      ],
+      // markers: [
+      //   {
+      //     latlng: {latitude: 37.793688, longitude: -122.404568},
+      //     title: "first",
+      //     description: "this is a marker",
+      //     // image: require('../../assets/images/flavortown.png')
+      //   },
+      //   {
+      //     latlng: {latitude: 37.803413, longitude: -122.408403},
+      //     title: "second",
+      //     description: "another marker",
+      //     // image: require('../../assets/images/flavortown.png')
+      //   },
+      //   {
+      //     latlng: {latitude: 37.807124, longitude: -122.417313},
+      //     title: "third",
+      //     description: "third marker",
+      //     // image: require('../../assets/images/flavortown.png')
+      //   }
+      // ],
+      markers: [],
+
       polyline: {
         coordinates: [{latitude: 37.793688, longitude: -122.404568}, {latitude: 37.803413, longitude: -122.408403}, {latitude: 37.807124, longitude: -122.417313}],
         strokeWidth: 3,
@@ -73,6 +75,21 @@ export default class AMap extends Component {
   }
 
   componentDidMount() {
+    const markersFromProps = [];
+    this.props.soundscape.soundspots.forEach(soundspot => {
+      const newMarker = {
+        latlng: {
+          latitude: soundspot.latitude,
+          longitude: soundspot.longitude
+        }
+      };
+      markersFromProps.push(newMarker);
+    });
+
+    this.setState({
+      markers: markersFromProps
+    });
+
     console.log("geolocation:", navigator.geolocation);
     this.watchId = navigator.geolocation.watchPosition(
       (position) => {
