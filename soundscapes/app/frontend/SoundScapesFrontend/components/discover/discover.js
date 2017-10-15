@@ -3,10 +3,14 @@ import { StyleSheet, Text, AppRegistry, ScrollView, View, Button, Image } from '
 import AMap from '../map/AMap';
 
 export default class Discover extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <AMap />
+        <AMap soundscapes={ this.props.soundscapes }/>
       </View>
     );
   }
