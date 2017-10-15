@@ -38,7 +38,7 @@ class User < ApplicationRecord
   end
 
   def get_device_id
-    
+
   end
 
   def self.search(query)
