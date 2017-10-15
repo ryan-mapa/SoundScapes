@@ -11,6 +11,7 @@
 #  updated_at    :datetime         not null
 #  token         :string
 #  refresh_token :string
+#  device_id     :string
 #
 
 class User < ApplicationRecord
@@ -20,6 +21,7 @@ class User < ApplicationRecord
   has_many :favorites
 
   def self.find_or_create_from_auth_hash(auth)
+
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.provider = auth.provider
       user.uid = auth.uid
@@ -29,6 +31,14 @@ class User < ApplicationRecord
       user.refresh_token = auth.credentials.refresh_token
       user.save!
     end
+  end
+
+  def self.ensure_device_id
+    self.device_id ||= get_device_id
+  end
+
+  def get_device_id
+
   end
 
   def self.search(query)

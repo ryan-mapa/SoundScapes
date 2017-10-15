@@ -11,6 +11,7 @@
 #  updated_at    :datetime         not null
 #  token         :string
 #  refresh_token :string
+#  device_id     :string
 #
 
 require 'test_helper'
