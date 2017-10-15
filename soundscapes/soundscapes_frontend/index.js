@@ -8,7 +8,8 @@ import {
   StyleSheet,
   Text,
   View,
-  NativeModules
+  NativeModules,
+  Linking
 } from 'react-native';
 
 // debugger;
@@ -18,8 +19,8 @@ class logIn extends Component {
   componentWillMount() {
     console.log(NativeModules);
     return SpotifyAuth.initWithCredentials(
-      "28d14392889b49b687084edd83dbc798",
-      "soundscapes://redirectafterlogin",
+      "2d9b5153c47946eea1f7af099022b036",
+      "http://localhost:3000/spotifydeeplink",
       [
         "streaming",
         "playlist-read-private",
@@ -38,6 +39,12 @@ class logIn extends Component {
     );
   }
 
+  componentDidMount() {
+    Linking.getInitialURL().then(url => {
+      console.log('intiaial url is:', url);
+    }).catch(err => console.log(err));
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -48,21 +55,28 @@ class logIn extends Component {
           style={styles.button}
           onPress={() => {
             SpotifyAuth.loggedIn(res => {
-              console.warn(res)
+              console.warn(res);
+              console.log(res);
+              debugger;
               if(!res) {
+                debugger;
                 SpotifyAuth.startAuthenticationFlow(error => {
                   if(!error) {
+                    debugger;
                     this.props.navigator.replace({
                       component: logInSuccess,
                       title: "Success"
                     });
                   }
                   else {
+                    debugger;
                     alert(error);
                   }
                 });
               }
               else {
+                console.log("here");
+                debugger;
                 this.props.navigator.replace({
                   component: logInSuccess,
                   title: "Success"
@@ -154,6 +168,21 @@ class logInSuccess extends Component {
 }
 
 class spotifyModule extends Component {
+
+  componentDidMount() {
+    console.log("MOUNTED");
+    Linking.addEventListener('url', this._handleOpenURL);
+  }
+
+  componentWillUnmount() {
+    Linking.removeEventListener('url', this._handleOpenURL);
+  }
+
+  _handleOpenURL(event) {
+    console.log("Monkeys in handleopen");
+    console.log(event.url);
+  }
+
   render() {
     return (
       <NavigatorIOS
