@@ -98,14 +98,22 @@ export default class AMap extends Component {
         };
         markersFromProps.push(newMarker);
         coordinates.push(newCoords);
+
       });
+      console.log("markersFromProps:", markersFromProps);
+      console.log("coordinates:", coordinates);
       polylinesFromProps.push(coordinates);
+      console.log("polylinesFromProps:", polylinesFromProps);
     });
+
+    console.log("polylinesFromProps2:", polylinesFromProps);
+    console.log("markersFromProps2:", markersFromProps);
 
     this.setState({
       markers: markersFromProps,
       polylines: polylinesFromProps
     });
+    console.log("map state:", this.state);
   }
 
   componentWillMount() {
@@ -142,7 +150,7 @@ export default class AMap extends Component {
   }
 
   render() {
-    // console.log("state:", this.state);
+    console.log("state:", this.state);
     return(
       <MapView
         ref="map"
@@ -161,9 +169,9 @@ export default class AMap extends Component {
       {this.state.polylines.map(polyline => {
         return(
           <MapView.Polyline
-            coordinates={polyline.coordinates}
-            strokeColor={polyline.strokeColor}
-            strokeWidth={polyline.strokeWidth}
+            coordinates={polyline}
+            strokeColor={'#4286f4'}
+            strokeWidth={3}
             />
         );
       })}
