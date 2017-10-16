@@ -1,13 +1,13 @@
-import axios from 'axios';
+import * as axios from 'axios';
 
 export const fetchSoundscapes = data => (
-  axios.get('api/soundscapes')
+  axios.get('https://soundscapesios.herokuapp.com/api/soundscapes', data)
 );
 
 export const fetchSoundscape = soundscapeId => (
-  axios.get(`api/soundscapes/${soundscapeId}`)
+  axios.get(`https://soundscapesios.herokuapp.com/api/soundscapes/${soundscapeId}`)
 );
 
 export const createSoundscape = soundscape => (
-  axios.post('api/soundscapes', soundscape)
+  axios.post('https://soundscapesios.herokuapp.com/api/soundscapes', soundscape)
 );
