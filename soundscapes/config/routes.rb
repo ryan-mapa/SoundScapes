@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root to: "home#show"
 
   # get 'spotifydeeplink', to: 'sessions#redirect'
-  get 'spotifydeeplink', to: redirect('soundscapes://yo')
+  get 'spotifydeeplink', to: redirect('SoundScapesFrontend://')
 
   get 'fetchcurrentuser', to: 'sessions#fetchcurrentuser'
 
