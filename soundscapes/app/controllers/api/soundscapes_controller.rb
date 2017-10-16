@@ -14,5 +14,6 @@ class Api::SoundscapesController < ApplicationController
 
   def index
     @soundscapes = Soundscape.all
+    render 'api/soundscapes/index.json.jbuilder'
   end
 end
