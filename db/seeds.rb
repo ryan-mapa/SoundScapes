@@ -28,6 +28,10 @@ soundscapes = Soundscape.create([
   {
     name: "Adam's greasy swim",
     user_id: user2_id
+  },
+  {
+    name: 'demo route',
+    user_id: user1_id
   }
   ])
 
@@ -88,5 +92,24 @@ soundspots = Soundspot.create([
     longitude: -122.107900,
     user_id: user2_id,
     soundscape_id: soundscape2_id
-  }
+  },
+  {
+    latitude: 37.330541,
+    longitude: -122.029642,
+    user_id: user1_id,
+    soundscape_id: soundscape3_id
+  },
+  {
+    latitude: 37.330277,
+    longitude: -122.023312,
+    user_id: user1_id,
+    soundscape_id: soundscape3_id
+  },
+  {
+    latitude: 37.335803,
+    longitude: -122.023410,
+    user_id: user1_id,
+    soundscape_id: soundscape3_id
+  },
+
   ])

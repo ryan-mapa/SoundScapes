@@ -133,12 +133,12 @@ export default class AMap extends Component {
         this.onRegionChange({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421
+          latitudeDelta: 0.0122,
+          longitudeDelta: 0.0121
         });
       },
       (error) => this.setState({ error: error.message }),
-      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000, distanceFilter: 10 }
+      { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000, distanceFilter: 10 }
     );
   }
 
