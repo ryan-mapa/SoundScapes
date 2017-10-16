@@ -7,6 +7,9 @@ const receiveCurrentUser = currentUser => ({
   currentUser
 });
 
-export const fetchCurrentUser = () => dispatch => (
+export const fetchCurrentUser = () => dispatch => {
+  console.log("inside fetchCurrentUser");
+  return (
   SessionUtil.fetchCurrentUser().then(currentUser => dispatch(receiveCurrentUser(currentUser)))
-);
+  );
+};

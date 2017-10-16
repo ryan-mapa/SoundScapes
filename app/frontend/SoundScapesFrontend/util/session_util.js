@@ -4,7 +4,6 @@ export const fetchLogin = () => (
   axios.get('/auth/spotify/callback')
 );
 
-<<<<<<< HEAD
 export const testSpotify = () => {
   const config = {
     headers: {
@@ -55,12 +54,9 @@ export const refresh = () => {
   });
 }
 
-
-
 // curl -H "Authorization: Basic BQAz18a1ejWtg0dreugb-2yZtivi25r1BKv-qhs2VInIBPH2kLdHXSd1rhKEJmh95BiKrXdrmVqkwXOluIXKzJpS1oCJzrBbhghyzAoffZRKXG4_XP1T2b5NhSmIF2l-3nZlz0wPMDb0_Lse4x-kPJfev-yMrqYV-1uSGtjC0LU7h1issLw" -d grant_type=refresh_token -d refresh_token=AQBfF5l2vqF-erLgsErP-feQxhW_CKw1GVRkAYbUaOxBowoE75giXNyTw-CAqYTdexf2PjyPIadwAd4B4WDI2OT2oAiEm2NbrOcEenk_xhko7wDgSvr2Vt09eUgIIOPK5Sk 'https://accounts.spotify.com/api/token'
 // {"access_token": "BQAz18a1ejWtg0dreugb-2yZtivi25r1BKv-qhs2VInIBPH2kLdHXSd1rhKEJmh95BiKrXdrmVqkwXOluIXKzJpS1oCJzrBbhghyzAoffZRKXG4_XP1T2b5NhSmIF2l-3nZlz0wPMDb0_Lse4x-kPJfev-yMrqYV-1uSGtjC0LU7h1issLw", "token_type": "Bearer", "scope": "user-read-private user-read-email user-modify-playback-state", "expires_in": 3600 }
-=======
+
 export const fetchCurrentUser = () => (
   axios.get('me')
 );
->>>>>>> 31481391cfa03ef31b9aa5c04fafc12b597669ea

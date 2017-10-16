@@ -5,15 +5,12 @@
     "react-native-maps": "^0.17.0"
   },
   "engines": {
-<<<<<<< HEAD:soundscapes/package.json
     "node": "4.1.1",
     "npm": "2.1.x"
   },
   "scripts": {
-    "postinstall": "webpack"
-=======
+    "postinstall": "webpack",
     "node": "6.10.1",
     "npm": "3.10.10"
->>>>>>> 2a61b5cc7293c53b0716d4ce1310f7c74a4a4fc9:package.json
   }
 }
