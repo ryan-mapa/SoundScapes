@@ -16,7 +16,7 @@ export default class Login extends React.Component {
     Linking.openURL('http://localhost:3000/auth/spotify').then(
       () => {
         console.log("inside then");
-        testSpotify();
+        // testSpotify();
       }
     );
   }
@@ -29,6 +29,11 @@ export default class Login extends React.Component {
           title="Login with Spotify from app"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
+        />
+        <Button
+          onPress={() => testSpotify()}
+          title="play musics"
+          color="#841584"
         />
       </View>
     );

@@ -26,7 +26,7 @@ export const testSpotify = () => {
   }).catch((error) => {
     console.log(error);
     console.log(error + " DOOODLES");
-    refresh()
+    // refresh()
   });
 };
 
