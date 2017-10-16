@@ -130,6 +130,24 @@ export default class AMap extends Component {
           error: null,
         });
         // console.log("region:", this.state.region);
+        const radius = 0.005;
+        for (let i = 0; i < this.state.markers.length; i++) {
+          const pos = this.state.position.coords;
+          const lat = pos.latitude;
+          const lng = pos.longitude;
+          const marker = this.state.markers[i];
+          const markerLat = marker.latitude;
+          const markerLng = marker.longitude;
+
+          const a = lat - markerLat;
+          const b = lng - markerLng;
+          const c = Math.sqrt((a * a) + (b * b));
+
+          if (c < radius) {
+            marker.pinColor = '#fbff14';
+          }
+        }
+
         this.onRegionChange({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
