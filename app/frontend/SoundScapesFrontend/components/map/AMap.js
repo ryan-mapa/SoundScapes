@@ -114,6 +114,7 @@ export default class AMap extends Component {
       polylines: polylinesFromProps
     });
     console.log("map state:", this.state);
+    this.colorPicker = this.colorPicker.bind(this);
   }
 
   componentWillMount() {
@@ -149,6 +150,17 @@ export default class AMap extends Component {
     this.refs.map.animateToRegion(region);
   }
 
+  colorPicker(num) {
+    const colors = [
+      '#1bc467',
+      '#4286f4',
+      '#fcf932',
+      '#842caa'
+    ];
+
+    return colors[num];
+  }
+
   render() {
     console.log("state:", this.state);
     return(
@@ -167,10 +179,11 @@ export default class AMap extends Component {
         />);
       })}
       {this.state.polylines.map(polyline => {
+        const colorNum = Math.floor(Math.random() * 4);
         return(
           <MapView.Polyline
             coordinates={polyline}
-            strokeColor={'#4286f4'}
+            strokeColor={this.colorPicker(colorNum)}
             strokeWidth={3}
             />
         );
