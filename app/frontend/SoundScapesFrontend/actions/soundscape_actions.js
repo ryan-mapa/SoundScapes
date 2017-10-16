@@ -28,7 +28,7 @@ export const getSoundscape = soundscapeId => dispatch => (
 
 export const getSoundscapes = filters => dispatch => (
   APIUtil.fetchSoundscapes(filters)
-    .then(soundscapes => dispatch(receiveSoundscapes(soundscapes)),
+    .then(soundscapes => dispatch(receiveSoundscapes(soundscapes.data)),
     err => dispatch(receiveErrors(err.responseJSON))
   )
 );

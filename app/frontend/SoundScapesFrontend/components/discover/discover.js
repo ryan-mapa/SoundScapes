@@ -7,7 +7,8 @@ export default class Discover extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    console.log("discover mounted");
     this.props.getSoundscapes();
   }
 

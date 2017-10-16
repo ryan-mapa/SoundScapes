@@ -64,6 +64,7 @@ export default class AMap extends Component {
       // },
 
       polylines: [],
+      soundscapes: {},
 
       position: null,
       error: null,
@@ -77,10 +78,12 @@ export default class AMap extends Component {
     this.onRegionChange = this.onRegionChange.bind(this);
   }
 
-  componentDidMount() {
+  componentWillReceiveProps(nextProps) {
+    console.log("map received props");
     const markersFromProps = [];
     const polylinesFromProps = [];
-    this.props.soundscapes.forEach(soundscape => {
+    console.log("soundscapes:", nextProps.soundscapes);
+    nextProps.soundscapes.forEach(soundscape => {
       const coordinates = [];
       soundscape.soundspots.forEach(soundspot => {
         const newMarker = {
@@ -103,6 +106,11 @@ export default class AMap extends Component {
       markers: markersFromProps,
       polylines: polylinesFromProps
     });
+  }
+
+  componentWillMount() {
+    console.log("map mounted");
+
 
     console.log("geolocation:", navigator.geolocation);
     this.watchId = navigator.geolocation.watchPosition(
