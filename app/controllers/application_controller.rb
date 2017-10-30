@@ -14,4 +14,12 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def login
+
+  end
+
+  def logout
+
+  end
+
 end

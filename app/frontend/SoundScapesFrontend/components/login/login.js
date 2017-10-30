@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, Linking, AppRegistry, ScrollView, View, Button, Image } from 'react-native';
-import { fetchCurrentUser, fetchLogin, testSpotify } from '../../util/session_util';
+import { fetchLogin, testSpotify } from '../../util/session_util';
+import {fetchCurrentUser} from '../../actions/session_actions';
 // import { Linking } from 'RCTLinking';
 
 
@@ -13,8 +14,9 @@ export default class Login extends React.Component {
   }
 
   componentDidMount() {
-    console.log("component did mount");
-    () => dispatch(fetchCurrentUser());
+    fetchCurrentUser();
+    console.log("component did mount 4");
+    // () => this.dispatch(fetchCurrentUser());
   }
 
   omniauth() {
