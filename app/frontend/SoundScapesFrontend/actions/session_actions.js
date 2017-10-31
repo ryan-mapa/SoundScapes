@@ -7,7 +7,7 @@ const receiveCurrentUser = currentUser => ({
   currentUser
 });
 
-export const fetchCurrentUser = () => {
+export const fetchCurrentUser = () => dispatch => {
   // debugger;
   console.log("in fetchCurrentUser");
   // return (

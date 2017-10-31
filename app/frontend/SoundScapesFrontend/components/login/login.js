@@ -44,7 +44,7 @@ export default class Login extends React.Component {
         />
         <Button
           onPress={(e) => this.test(e)}
-          title="play musics"
+          title="fetch current user"
           color="#841584"
         />
       </View>
