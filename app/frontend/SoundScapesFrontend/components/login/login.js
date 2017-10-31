@@ -13,16 +13,16 @@ export default class Login extends React.Component {
     e.preventDefault();
     console.log('from inside test');
     this.props.fetchCurrentUser();
+    // .then(console.log("GOT THROUGH"));
     // debugger;
     // () => this.dispatch(fetchCurrentUser());
     // fetchCurrentUser();
   }
 
-  componentWilllMount() {
+  componentDidMount() {
     console.log("component did mount 4");
-    // this.fetchCurrentUser();
-    debugger;
-    // () => this.dispatch(fetchCurrentUser());
+    this.props.fetchCurrentUser();
+    // debugger;
   }
 
   omniauth() {

@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     // soundscapes: Object.values(state.entities.soundscapes),
     // searchScapes: ownProps.searchScapes
+
   };
 };
 
@@ -17,6 +18,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Login);
