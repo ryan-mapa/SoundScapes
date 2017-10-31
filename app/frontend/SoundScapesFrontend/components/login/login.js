@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, Linking, AppRegistry, ScrollView, View, Button, Image } from 'react-native';
-import { fetchLogin, testSpotify } from '../../util/session_util';
-import {fetchCurrentUser} from '../../actions/session_actions';
+import { fetchLogin, testSpotify, refresh } from '../../util/session_util';
+import { fetchCurrentUser } from '../../actions/session_actions';
 // import { Linking } from 'RCTLinking';
 
 
@@ -9,13 +9,17 @@ import {fetchCurrentUser} from '../../actions/session_actions';
 export default class Login extends React.Component {
 
 
-  test() {
+  test(e) {
+    e.preventDefault();
     console.log('from inside test');
+    // () => this.dispatch(fetchCurrentUser());
+    // fetchCurrentUser();
   }
 
-  componentDidMount() {
+  componentWillMount() {
     fetchCurrentUser();
     console.log("component did mount 4");
+    // debugger;
     // () => this.dispatch(fetchCurrentUser());
   }
 
@@ -38,7 +42,7 @@ export default class Login extends React.Component {
           accessibilityLabel="Learn more about this purple button"
         />
         <Button
-          onPress={() => testSpotify()}
+          onPress={(e) => this.test(e)}
           title="play musics"
           color="#841584"
         />

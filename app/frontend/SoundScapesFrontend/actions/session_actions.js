@@ -7,12 +7,13 @@ const receiveCurrentUser = currentUser => ({
   currentUser
 });
 
-export const fetchCurrentUser = () => dispatch => {
-  debugger;
-  return (
-    SessionUtil.fetchCurrentUser()
-    .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
-  );
+export const fetchCurrentUser = () => {
+  // debugger;
+  console.log("in fetchCurrentUser");
+  // return (
+  //   SessionUtil.fetchCurrentUser()
+  //   .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
+  // );
 };
 
 // export const fetchCurrentUser = () => {
