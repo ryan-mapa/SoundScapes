@@ -12,14 +12,15 @@ export default class Login extends React.Component {
   test(e) {
     e.preventDefault();
     console.log('from inside test');
+    debugger;
     // () => this.dispatch(fetchCurrentUser());
     // fetchCurrentUser();
   }
 
-  componentWillMount() {
-    fetchCurrentUser();
+  componentWilllMount() {
     console.log("component did mount 4");
-    // debugger;
+    // this.fetchCurrentUser();
+    debugger;
     // () => this.dispatch(fetchCurrentUser());
   }
 
