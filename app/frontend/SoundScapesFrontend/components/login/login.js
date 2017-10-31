@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, Linking, AppRegistry, ScrollView, View, Button, Image } from 'react-native';
 import { fetchLogin, testSpotify, refresh } from '../../util/session_util';
-import { fetchCurrentUser } from '../../actions/session_actions';
+// import { fetchCurrentUser } from '../../actions/session_actions';
 // import { Linking } from 'RCTLinking';
 
 
@@ -12,7 +12,8 @@ export default class Login extends React.Component {
   test(e) {
     e.preventDefault();
     console.log('from inside test');
-    debugger;
+    this.props.fetchCurrentUser();
+    // debugger;
     // () => this.dispatch(fetchCurrentUser());
     // fetchCurrentUser();
   }
