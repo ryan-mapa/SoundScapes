@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, Linking, AppRegistry, ScrollView, View, Button, Image } from 'react-native';
 import { fetchLogin, testSpotify, refresh } from '../../util/session_util';
 // import { fetchCurrentUser } from '../../actions/session_actions';
-// import { Linking } from 'RCTLinking';
+
 
 
 
@@ -12,7 +12,14 @@ export default class Login extends React.Component {
   test(e) {
     e.preventDefault();
     console.log('from inside test');
-    this.props.fetchCurrentUser();
+    this.props.fetchCurrentUser()
+    .then((data) => {
+        console.log(data);
+        // this.setState(data);
+      }).catch((error)=>{
+         console.log("Api call error");
+         alert(error.message);
+      });
     // .then(console.log("GOT THROUGH"));
     // debugger;
     // () => this.dispatch(fetchCurrentUser());
@@ -21,7 +28,7 @@ export default class Login extends React.Component {
 
   componentDidMount() {
     console.log("component did mount 4");
-    this.props.fetchCurrentUser();
+    // this.props.fetchCurrentUser();
     // debugger;
   }
 
