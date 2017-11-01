@@ -12,14 +12,14 @@ export default class Login extends React.Component {
   test(e) {
     e.preventDefault();
     console.log('from inside test');
-    this.props.fetchCurrentUser()
-    .then((data) => {
-        console.log(data);
-        // this.setState(data);
-      }).catch((error)=>{
-         console.log("Api call error");
-         alert(error.message);
-      });
+    this.props.fetchCurrentUser();
+    // .then((data) => {
+    //     console.log(data);
+    //     // this.setState(data);
+    //   }).catch((error)=>{
+    //      console.log("Api call error");
+    //      alert(error.message);
+    //   });
     // .then(console.log("GOT THROUGH"));
     // debugger;
     // () => this.dispatch(fetchCurrentUser());
@@ -36,6 +36,7 @@ export default class Login extends React.Component {
     Linking.openURL('http://localhost:3000/auth/spotify').then(
       () => {
         console.log("inside then");
+        this.props.fetchCurrentUser();
         // testSpotify();
       }
     );
